@@ -8,6 +8,7 @@ class profile::puppetwebsite (
 
   # Ensure directory tree exists
   exec { 'mkdir_web_root':
+    path    => '/bin, /usr/bin',
     command => "mkdir -p ${web_root}",
     creates => $web_root,
   }
