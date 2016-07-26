@@ -18,6 +18,7 @@ class profile::puppetwebsite (
     ensure   => latest,
     provider => git,
     source   => $web_source,
+    revision => 'master',
     require  => Exec['mkdir_web_root'],
   }
 
